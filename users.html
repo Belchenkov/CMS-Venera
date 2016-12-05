@@ -93,47 +93,51 @@
                     <li><a href="users.html">Пользователи</a></li>
                 </ol>
 
-                <table class="table table-striped">
-                    <tr>
-                        <th><input type="checkbox"></th>
-                        <th>Имя</th>
-                        <th>Email</th>
-                        <th>Роль</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="user.html">Пользователь 1</a></td>
-                        <td>user@user.com</td>
-                        <td>admin</td>
-                    </tr>
+                <table class="table table-striped tablesorter" id="sort-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Имя <i class="glyphicon glyphicon-chevron-down"></i></th>
+                            <th>Email <i class="glyphicon glyphicon-chevron-down"></i></th>
+                            <th>Роль <i class="glyphicon glyphicon-chevron-down"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="user.html">Пользователь 1</a></td>
+                            <td>user@user.com</td>
+                            <td>admin</td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="user.html">Пользователь 1</a></td>
-                        <td>user@user.com</td>
-                        <td>admin</td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="user.html">Пользователь 2</a></td>
+                            <td>user@user.com</td>
+                            <td>admin</td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="user.html">Пользователь 1</a></td>
-                        <td>user@user.com</td>
-                        <td>admin</td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="user.html">Пользователь 3</a></td>
+                            <td>user@user.com</td>
+                            <td>admin</td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="user.html">Пользователь 1</a></td>
-                        <td>user@user.com</td>
-                        <td>admin</td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="user.html">Пользователь 4</a></td>
+                            <td>user@user.com</td>
+                            <td>admin</td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="user.html">Пользователь 1</a></td>
-                        <td>user@user.com</td>
-                        <td>admin</td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="user.html">Пользователь 5</a></td>
+                            <td>user@user.com</td>
+                            <td>admin</td>
+                        </tr>
+                    </tbody>
                 </table>
                 <hr />
 
@@ -172,6 +176,16 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<script>
+    $(function () {
+        $('#sort-table').tablesorter({
+            sortList: [[0, 0], [1, 0]]
+        }); // end tablesorter()
+    });
+</script>
+
 </body>
 </html>

@@ -94,35 +94,39 @@
                 </ol>
 
 
-                <table class="table table-striped">
-                    <tr>
-                        <th><input type="checkbox"></th>
-                        <th>Заголовок категории</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="category.html">Категория 1</a></td>
-                    </tr>
+                <table class="table table-striped tablesorter" id="sort-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Заголовок категории <i class="glyphicon glyphicon-chevron-down"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="category.html">Категория 1</a></td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="category.html">Категория 2</a></td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="category.html">Категория 2</a></td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="category.html">Категория 3</a></td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="category.html">Категория 3</a></td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="category.html">Категория 4</a></td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="category.html">Категория 4</a></td>
+                        </tr>
 
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="category.html">Категория 5</a></td>
-                    </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="category.html">Категория 5</a></td>
+                        </tr>
+                    </tbody>
                 </table>
                 <hr />
 
@@ -161,6 +165,16 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<script>
+    $(function () {
+        $('#sort-table').tablesorter({
+            sortList: [[0, 0], [1, 0]]
+        }); // end tablesorter()
+    });
+</script>
+
 </body>
 </html>

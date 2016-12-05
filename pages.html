@@ -94,43 +94,47 @@
                 </ol>
 
 
-                <table class="table table-striped">
-                    <tr>
-                        <th><input type="checkbox"></th>
-                        <th>Заголовок страницы</th>
-                        <th>Категории</th>
-                        <th>Автор</th>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="page.html">Страница 1</a></td>
-                        <td>Категория 1</td>
-                        <td>Максимов Алексей</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="page.html">Страница 2</a></td>
-                        <td>Категория 2</td>
-                        <td>Максимов Алексей</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="page.html">Страница 3</a></td>
-                        <td>Категория 3</td>
-                        <td>Максимов Алексей</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="page.html">Страница 4</a></td>
-                        <td>Категория 4</td>
-                        <td>Максимов Алексей</td>
-                    </tr>
-                    <tr>
-                        <td><input type="checkbox"></td>
-                        <td><a href="page.html">Страница 5</a></td>
-                        <td>Категория 5</td>
-                        <td>Максимов Алексей</td>
-                    </tr>
+                <table class="table table-striped tablesorter" id="sort-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox"></th>
+                            <th>Заголовок страницы <i class="glyphicon glyphicon-chevron-down"></i></th>
+                            <th>Категории <i class="glyphicon glyphicon-chevron-down"></i></th>
+                            <th>Автор <i class="glyphicon glyphicon-chevron-down"></i></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="page.html">Страница 1</a></td>
+                            <td>Категория 1</td>
+                            <td>Максимов Алексей</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="page.html">Страница 2</a></td>
+                            <td>Категория 2</td>
+                            <td>Максимов Алексей</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="page.html">Страница 3</a></td>
+                            <td>Категория 3</td>
+                            <td>Максимов Алексей</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="page.html">Страница 4</a></td>
+                            <td>Категория 4</td>
+                            <td>Максимов Алексей</td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox"></td>
+                            <td><a href="page.html">Страница 5</a></td>
+                            <td>Категория 5</td>
+                            <td>Максимов Алексей</td>
+                        </tr>
+                    </tbody>
                 </table>
                 <hr />
 
@@ -168,6 +172,16 @@
 ================================================== -->
 <!-- Placed at the end of the document so the pages load faster -->
 <script src="js/jquery.min.js"></script>
+<script src="js/jquery.tablesorter.js"></script>
 <script src="js/bootstrap.js"></script>
+
+<script>
+    $(function () {
+       $('#sort-table').tablesorter({
+           sortList: [[0, 0], [1, 0]]
+       }); // end tablesorter()
+    });
+</script>
+
 </body>
 </html>
